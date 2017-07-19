@@ -1,1 +1,0 @@
-char compute(char a);

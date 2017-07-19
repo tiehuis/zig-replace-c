@@ -1,5 +1,5 @@
-pub use @import("compute_helper.zig");
+use @import("compute_helper.zig");
 
-export fn compute(a: u8) -> u8 {
+pub fn compute(a: u8) -> u8 {
     compute_helper(a) + 5
 }
