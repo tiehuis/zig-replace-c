@@ -9,7 +9,6 @@ pub fn build(b: &Builder) {
     });
 
     const source_files = [][]const u8 {
-        "compute_helper.c",
         "main.c",
     };
 
@@ -19,6 +18,7 @@ pub fn build(b: &Builder) {
 
     const zig_source_files = [][]const u8 {
         "compute.zig",
+        "compute_helper.zig",
         "display.zig",
     };
 
