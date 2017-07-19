@@ -4,13 +4,13 @@ pub fn build(b: &Builder) {
     const exe = b.addCExecutable("main");
     b.addCIncludePath(".");
     exe.addCompileFlags([][]const u8 {
-        "-std=c99"
+        "-std=c99",
+        "-nostdlib",
     });
 
     const source_files = [][]const u8 {
         "compute_helper.c",
-        "display.c",
-        "main.c"
+        "main.c",
     };
 
     for (source_files) |source| {
@@ -19,6 +19,7 @@ pub fn build(b: &Builder) {
 
     const zig_source_files = [][]const u8 {
         "compute.zig",
+        "display.zig",
     };
 
     for (zig_source_files) |source| {
